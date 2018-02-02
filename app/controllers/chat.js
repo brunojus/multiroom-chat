@@ -11,6 +11,6 @@ module.exports.iniciaChat = function(application,req,res){
         res.render("index",{validacao:erros})
         return;
     }
-
+    io.emit('msgParaClient')
     res.render("chat");
 }
